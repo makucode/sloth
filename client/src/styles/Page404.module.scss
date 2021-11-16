@@ -1,0 +1,38 @@
+@import "globals";
+
+.Page404 {
+    height: calc(100vh - 110px);
+}
+
+.Page404Content {
+    width: fit-content;
+    max-width: calc(100vw - 2 * $padX);
+    padding: 9rem 14rem;
+    box-shadow: $shadowMain;
+    border-radius: $radius;
+    background-color: $light;
+    display: flex;
+}
+
+.Page404Content span {
+    font-size: 1.5rem;
+}
+
+.Line {
+    width: 4px;
+    border-radius: $radiusL;
+    background-color: $accent;
+    margin: 0 0.5rem;
+}
+
+@media only screen and (max-width: $laptopBigger) {
+    .Page404Content {
+        max-width: calc(100vw - 2 * $padXsm);
+    }
+}
+
+@media only screen and (max-width: $phone) {
+    .Page404Content {
+        max-width: calc(100vw - 2 * $padXxs);
+    }
+}

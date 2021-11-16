@@ -1,0 +1,32 @@
+@import "globals";
+
+.AddItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.AddItem input {
+    font-family: $sans;
+    font-size: 1.25rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    color: $secondary;
+    width: calc(100% - 1rem);
+    background-color: $accent;
+    border-radius: $radius;
+}
+
+.AddItem input::placeholder {
+    color: $mid;
+}
+
+.AddItem button {
+    display: block;
+    height: fit-content;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.AddItem button:hover {
+    color: $secondary;
+}

@@ -1,0 +1,39 @@
+//
+
+$padX: 20vw;
+$padXsm: 12vw;
+$padXxs: 6vw;
+$padY: 4rem;
+$radius: 15px;
+$radiusL: 25px;
+
+// COLORS
+
+$main: #4c546f;
+$secondary: #4891ff;
+$light: #ffffff;
+$mid: #8c8c8c;
+$accent: #ebf2fe;
+$alert: indianred;
+
+// SHADOWS
+
+$shadowMain: 0px 15px 20px -10px #4c546f1a;
+
+// FONTS
+
+$serif: "Playfair Display", serif;
+$sans: "Lato", sans-serif;
+
+// EASE
+
+$easeFast: cubic-bezier(0.075, 0.82, 0.165, 1);
+
+// BREAKPOINTS
+
+$belowFullHD: 1800px;
+$laptopBigger: 1440px;
+$laptopSmaller: 1280px;
+$tablet: 1024px;
+$phone: 768px;
+$smallPhone: 400px;

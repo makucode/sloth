@@ -1,0 +1,64 @@
+@import "globals";
+
+.TodoItem {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.TodoItem span {
+    padding: 0.25rem 0;
+    cursor: pointer;
+    max-width: 100%;
+    word-break: break-all;
+}
+
+.TodoItem input {
+    font-family: $sans;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    color: $secondary;
+    width: 100%;
+    background-color: $accent;
+    border-radius: $radius;
+}
+
+.TodoItem input::placeholder {
+    color: $mid;
+}
+
+.TodoItemButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TodoItemButtons button {
+    background-color: transparent;
+    border: none;
+    color: $main;
+    padding: 0;
+    transition: all $easeFast 0.3s;
+}
+
+.TodoItemButtons svg {
+    fill: $main;
+    stroke: $main;
+    margin-left: 0.5rem;
+    transition: all $easeFast 0.3s;
+}
+
+.TodoItemButtons button:hover {
+    color: $secondary;
+    svg {
+        fill: $secondary;
+        stroke: $secondary;
+    }
+}
+
+.ItemDelete:hover svg {
+    fill: $alert !important;
+    stroke: $alert !important;
+}

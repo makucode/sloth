@@ -1,0 +1,56 @@
+@import "globals";
+
+.TodoList {
+    width: calc(31% - 8rem);
+    height: fit-content;
+    padding: 2rem 4rem;
+    box-shadow: $shadowMain;
+    border-radius: $radius;
+    background-color: $light;
+    margin-bottom: 4rem;
+}
+
+.TodoListHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.TodoListButtons button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.TodoListButtons svg {
+    fill: $main;
+    stroke: $main;
+    transition: all $easeFast 0.3s;
+}
+
+.TodoListDelete:hover {
+    svg {
+        fill: $alert;
+        stroke: $alert;
+    }
+}
+
+@media only screen and (max-width: $belowFullHD) {
+    .TodoList {
+        width: calc(48% - 8rem);
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .TodoList {
+        width: calc(100% - 8rem);
+    }
+}
+
+@media only screen and (max-width: $phone) {
+    .TodoList {
+        width: calc(100% - 4rem);
+        margin-bottom: 2rem;
+        padding: 1.5rem 2rem;
+    }
+}

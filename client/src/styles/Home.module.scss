@@ -1,0 +1,21 @@
+@import "globals";
+
+.Home {
+    width: calc(100vw - 2 * $padX);
+    height: 40vh;
+    margin: 0 auto;
+    margin-top: calc(110px + 4rem);
+}
+
+@media only screen and (max-width: $laptopBigger) {
+    .Home {
+        width: calc(100vw - 2 * $padXsm);
+    }
+}
+
+@media only screen and (max-width: $phone) {
+    .Home {
+        width: calc(100vw - 2 * $padXxs);
+        margin-top: 2rem;
+    }
+}

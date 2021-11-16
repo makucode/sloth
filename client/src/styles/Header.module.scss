@@ -1,0 +1,142 @@
+@import "globals";
+
+.Header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100vw;
+    height: 110px;
+    background-color: $light;
+    justify-content: center;
+}
+
+.HeaderContent {
+    width: calc(100vw - $padX * 2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.HeaderLeft {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.HeaderLeft span {
+    display: block;
+    font-family: $sans;
+}
+
+.HeaderLogo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    transition: all $easeFast 0.75s;
+}
+
+.HeaderLogoSub {
+    font-size: 1.25rem;
+    color: $main;
+    font-weight: 500;
+    transition: all $easeFast 0.75s;
+}
+
+.HeaderLeft:hover {
+    .HeaderLogo {
+        color: $main;
+    }
+}
+
+.HeaderLogo:hover ~ .HeaderLogoSub {
+    filter: blur(0.75px);
+}
+
+.HeaderRight a {
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.HeaderRight span {
+    font-family: $sans;
+    font-weight: 400;
+    font-size: 1.25rem;
+    text-decoration: none;
+    cursor: pointer;
+    color: $main;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s $easeFast;
+}
+
+.HeaderRight svg {
+    fill: $main;
+    margin-right: 7.5px;
+    transition: all 0.3s $easeFast;
+    margin-top: 2px;
+}
+
+.HeaderLogIn {
+    display: flex;
+}
+
+.HeaderProfile {
+    cursor: default !important;
+}
+
+.HeaderProfile svg {
+    transform: translateX(0) !important;
+}
+
+.HeaderRight a:hover,
+.HeaderRight span:hover {
+    svg {
+        transform: translateX(5px);
+    }
+}
+
+.HeaderLogout:hover {
+    color: $secondary;
+    svg {
+        transform: translateX(0) !important;
+        fill: $secondary;
+    }
+}
+
+@media only screen and (max-width: $laptopBigger) {
+    .HeaderContent {
+        width: calc(100vw - 2 * $padXsm);
+    }
+}
+
+@media only screen and (max-width: $phone) {
+    .Header {
+        height: 90px;
+        position: static;
+    }
+
+    .HeaderContent {
+        width: calc(100vw - 2 * $padXxs);
+    }
+
+    .HeaderLogIn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .HeaderLogIn a {
+        font-size: 1rem;
+    }
+
+    .HeaderLogo {
+        font-size: 2rem;
+    }
+
+    .HeaderLogoSub {
+        font-size: 1.1rem;
+    }
+}

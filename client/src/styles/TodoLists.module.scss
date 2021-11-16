@@ -1,0 +1,14 @@
+@import "globals";
+
+.TodoLists {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.Filler {
+    width: calc(31% - 8rem);
+    padding: 0 4rem;
+    height: 1vh;
+}

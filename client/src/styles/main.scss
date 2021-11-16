@@ -1,0 +1,168 @@
+@import "globals";
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $accent;
+    font-family: $sans;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: $sans;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: $mid;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: $main;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    color: $main;
+}
+
+a {
+    font-family: $sans;
+    font-weight: 400;
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: $main;
+}
+
+button {
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: $sans;
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    border: solid 1px $secondary;
+    border-radius: $radiusL;
+    background-color: $secondary;
+    color: $light;
+    cursor: pointer;
+    transition: all $easeFast 0.6s;
+}
+
+button span {
+    transition: all $easeFast 0.6s;
+}
+
+button:hover {
+    background-color: transparent;
+    span {
+        color: $secondary;
+    }
+}
+
+label {
+    display: block;
+    font-size: 1.25rem;
+}
+
+input {
+    display: block;
+    font-size: 1.25rem;
+    padding: 0;
+    margin: 0;
+}
+
+//
+
+.main {
+    margin-top: 110px;
+    color: $main;
+    font-family: $sans;
+    padding: 0 #{$padX};
+}
+
+.errorAlert {
+    padding: 2rem 4rem;
+    box-shadow: $shadowMain;
+    border-radius: $radius;
+    background-color: $light;
+    position: fixed;
+    left: 50%;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    color: $alert;
+    animation: alertIn 5s ease-in-out;
+}
+
+// ANIMATIONS
+
+@keyframes alertIn {
+    0% {
+        opacity: 0;
+        transform: translateY(200%) translateX(-50%);
+    }
+    25% {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateY(0) translateX(-50%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(200%) translateX(-50%);
+    }
+}
+
+// MEDIA QUERIES
+
+@media only screen and (max-width: $laptopBigger) {
+    .main {
+        padding: 0 $padXsm;
+    }
+}
+
+@media only screen and (max-width: $phone) {
+    .main {
+        padding: 0 $padXxs;
+        margin-top: 3rem;
+    }
+
+    .errorAlert {
+        padding: 1.5rem 2rem;
+        width: calc(70vw - 4rem);
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 1rem !important;
+    }
+}

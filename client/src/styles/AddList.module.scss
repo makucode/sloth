@@ -1,0 +1,50 @@
+@import "globals";
+
+.AddList {
+    width: calc(31% - 8rem);
+    padding: 2rem 4rem;
+    box-shadow: $shadowMain;
+    border-radius: $radius;
+    background-color: $light;
+    height: fit-content;
+}
+
+.AddListForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.AddListForm input {
+    font-family: $sans;
+    font-size: 1.25rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    color: $secondary;
+    width: calc(100% - 1rem);
+    background-color: $accent;
+    border-radius: $radius;
+}
+
+.AddListForm input::placeholder {
+    color: $mid;
+}
+
+.AddListForm button {
+    display: block;
+    height: fit-content;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: $belowFullHD) {
+    .AddList {
+        width: calc(48% - 8rem);
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .AddList {
+        width: calc(100% - 8rem);
+        margin-bottom: 4rem;
+    }
+}

@@ -1,0 +1,37 @@
+@import "globals";
+
+.Register {
+    height: calc((100vh - 110px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AuthFormItem {
+    margin-top: 0.75rem;
+}
+
+.AuthInfoContainer {
+    margin-top: 0.5rem;
+}
+
+.AuthInfo {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.AuthInfo a {
+    color: $secondary;
+    font-size: 1rem;
+}
+
+.AuthErr {
+    color: $alert;
+}
+
+@media only screen and (max-width: $phone) {
+    .Register {
+        height: fit-content;
+        margin-bottom: 3rem;
+    }
+}
